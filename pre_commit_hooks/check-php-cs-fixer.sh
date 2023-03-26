@@ -4,7 +4,7 @@ app="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 source $app/functions.sh
 
 ############################################################
-# functions                                               ##
+# functions                                               #
 ############################################################
 check-php-cs-fixer() {
   echo 'Start check php-cs-fixer'
