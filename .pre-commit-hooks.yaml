@@ -1,0 +1,27 @@
+- id: check-git-name-branch
+  name: Check git name branch
+  description: Check git name branch
+  entry:  pre_commit_hooks/check-git-name-branch.sh
+  language: script
+  stages: [commit]
+
+- id: check-call-invalid-function
+  name: Check call invalid function
+  description: Check call invalid function
+  entry:  pre_commit_hooks/check-call-invalid-function.sh
+  language: script
+  stages: [commit]
+
+- id: check-php-cs-fixer
+  name: Check php-cs-fixer
+  description: Check php-cs-fixer
+  entry:  pre_commit_hooks/check-php-cs-fixer.sh
+  language: script
+  stages: [commit]
+
+- id: check-message-commit
+  name: Check message commit
+  description: Check message commit
+  entry:  pre_commit_hooks/check-message-commit.sh
+  language: script
+  stages: [commit-msg]

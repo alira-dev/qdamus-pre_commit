@@ -1,0 +1,9 @@
+default_install_hook_types: [pre-commit, commit-msg]
+repos:
+    - repo: https://bitbucket.org/monchyrcg/qdamos-pre-commit
+      rev: 2.0.11
+      hooks:
+          - id: check-git-name-branch
+          - id: check-call-invalid-function
+          - id: check-php-cs-fixer
+          - id: check-message-commit
