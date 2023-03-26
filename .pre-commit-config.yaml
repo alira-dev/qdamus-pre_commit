@@ -1,6 +1,6 @@
 default_install_hook_types: [pre-commit, commit-msg]
 repos:
-    - repo: https://bitbucket.org/monchyrcg/qdamos-pre-commit
+    - repo: https://github.com/monchyrcg/qdamos-pre_commit
       rev: 2.0.11
       hooks:
           - id: check-git-name-branch
