@@ -1,7 +1,6 @@
 #!/bin/bash
 
 app="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-echo "$app"
 source $app/functions.sh
 
 ############################################################

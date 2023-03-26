@@ -10,9 +10,6 @@ get_specific_var_environment() {
     source .env
   fi
 
-  pwd="$(pwd)"
-  echo "$pwd"
-
   local name_var=$1
   local value_var=${!name_var}
 
