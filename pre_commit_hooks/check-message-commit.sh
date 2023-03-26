@@ -28,7 +28,7 @@ for pattern in "${patterns[@]}" ; do
 done
 
 if ! $is_valid ; then
-  echo "Bad commit message, see example: $alias-{1234, VAGRANT, XXXX}: commit message"
+  echo "Bad commit message, see example: $alias-{1234, XXXX}: commit message"
   exit 1
 fi
 
