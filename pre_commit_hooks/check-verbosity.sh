@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 LC_ALL=C
 
+
 echo 'start pre-commit'
 
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
