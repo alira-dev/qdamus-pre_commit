@@ -6,18 +6,18 @@ source $app/functions.sh
 ############################################################
 # functions                                               #
 ############################################################
-check-php-cs-fixer() {
+check-phpstan() {
   echo 'Start check php-cs-fixer'
 
   git diff --name-only --cached | grep -e '^\(.*\).php$' | while read line; do
     case $1 in
       "local")
-        echo "Run: php composer analyse --configuration phpstan.neon --memory-limit=-1"
-        php composer php-cs-fixer analyse --configuration phpstan.neon --memory-limit=-1 "$line"
+        echo "Run: php composer php-cs-fixer"
+        php composer php-cs-fixer "$line"
         ;;
       "docker")
-        echo "Run: docker exec $2 composer analyse --configuration phpstan.neon --memory-limit=-1 2>/dev/null"
-        docker exec $2 composer analyse --configuration phpstan.neon --memory-limit=-1 "$line" 2>/dev/null
+        echo "Run: docker exec $2 composer php-cs-fixer 2>/dev/null"
+        docker exec $2 composer php-cs-fixer "$line" 2>/dev/null
         ;;
       \?)
         echo "Error: Invalid run type"
@@ -42,4 +42,4 @@ run_type=$return_func
 get_specific_var_environment "DOCKER_IMAGE_NAME"
 image_name=$return_func
 
-check-php-cs-fixer $run_type $image_name
+check-phpstan $run_type $image_name
