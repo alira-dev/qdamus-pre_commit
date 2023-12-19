@@ -25,3 +25,10 @@
   entry:  pre_commit_hooks/check-message-commit.sh
   language: script
   stages: [commit-msg]
+
+- id: check-phpstan
+  name: Check phpstan
+  description: Check phpstan
+  entry:  pre_commit_hooks/check-phpstan.sh
+  language: script
+  stages: [commit]

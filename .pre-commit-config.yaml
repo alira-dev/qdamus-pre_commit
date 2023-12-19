@@ -7,3 +7,4 @@ repos:
           - id: check-call-invalid-function
           - id: check-php-cs-fixer
           - id: check-message-commit
+          - id: check-phpstan
