@@ -1,1 +1,1 @@
-# qdamos-pre_commit
+# qdamus-pre_commit
